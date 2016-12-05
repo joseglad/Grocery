@@ -4,12 +4,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Grocery - Votre réfrigérateur - Votre liste de course</title>
 </head>
 <body>
-		<% 
-            String attribut = (String) request.getAttribute("auteur");
-            out.println( attribut );
-        %>
+
+		<form method="POST" action="/grocery/connection">
+			<label>Adresse e-mail <input type="text" name="email"/></label><br/>
+			<label>Mot de passe <input type="password" name="passe"/></label><br/>
+			<input type="submit" value="Me connecter"/>
+		</form>
+		
+		<form method="POST" action="/grocery/inscription">
+			<label>Nom <input type="text" name="firstname"/></label><br/>
+			<label>Prénom <input type="text" name="lastname"/></label><br/>
+			<label>Mot de passe <input type="password" name="passe"/></label><br/>
+			<label>Confirmation du mot de passe <input type="password" name="passe2"/></label><br/>
+			<label>Adresse e-mail <input type="text" name="email"/></label><br/>
+			<input type="submit" value="M'inscrire"/>
+		</form>
+
 </body>
 </html>
